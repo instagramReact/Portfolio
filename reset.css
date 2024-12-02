@@ -1,0 +1,57 @@
+/* Resetando margens, paddings e outras propriedades para consistência entre navegadores */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definir fontes e cores padrão para todo o site */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Remover o estilo de listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remover o estilo padrão de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Imagens, tabelas e outros elementos devem ser dimensionados para ocupar o máximo possível de seu contêiner */
+img,
+picture,
+video,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Definir a altura de linha para todas as seções */
+section {
+    line-height: 1.5;
+}
+
+/* Garantir que os formulários ocupem o espaço desejado */
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Retirar a borda de campos de formulário */
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

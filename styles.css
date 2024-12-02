@@ -1,0 +1,199 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a1a1a; /* Fundo escuro para o cabeçalho */
+    color: #e67e22; /* Laranja para o título */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e67e22; /* Laranja nos links */
+}
+
+/* Seção Sobre */
+#sobre {
+    background-color: #212121; /* Cinza escuro para o fundo */
+    color: #e0e0e0;
+    padding: 60px 20px;
+    
+    text-align: center; /* Centraliza o conteúdo de texto, incluindo a imagem */
+}
+
+#sobre img {
+    max-width: 300px;
+    border-radius: 20%;
+    border: 5px solid #e67e22; /* Laranja para borda */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto 20px; /* Centraliza a imagem horizontalmente e adiciona espaçamento inferior */
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+#sobre p {
+    font-size: 1.2rem;
+    color: #b0b0b0; /* Cinza claro para o texto */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Seção Projetos */
+#projetos {
+    background-color: #181818; /* Fundo ainda mais escuro para contrastar com a seção anterior */
+    color: #e0e0e0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #e67e22;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.projeto img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Seção Contato */
+#contato {
+    background-color: #2c2c2c; /* Cinza escuro para o fundo da seção de contato */
+    color: #e0e0e0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e67e22;
+}
+
+#contato p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.redes-sociais a {
+    font-size: 3rem;
+    color: #e0e0e0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #e67e22; /* Laranja no hover */
+    transform: translateY(-5px); /* Efeito de elevação */
+}
+
+.redes-sociais a:active {
+    transform: translateY(0);
+}
+
+/* Rodapé */
+footer {
+    background-color: #121212; /* Fundo escuro para o rodapé */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projetos-grid {
+        grid-template-columns: 1fr 1fr; /* Duas colunas em telas médias */
+    }
+
+    .redes-sociais {
+        gap: 20px;
+    }
+
+    .redes-sociais a {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+
+    #sobre img {
+        max-width: 200px;
+    }
+
+    .redes-sociais a {
+        font-size: 2rem;
+    }
+
+    #contato button {
+        font-size: 1rem;
+    }
+}
